@@ -955,6 +955,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: speed
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &247832512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +3904,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateSpeed
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &761575830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3974,6 +3982,99 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761575830}
+--- !u!1 &774244682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 774244683}
+  - component: {fileID: 774244686}
+  - component: {fileID: 774244685}
+  - component: {fileID: 774244684}
+  m_Layer: 0
+  m_Name: OceanCreatorCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &774244683
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774244682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1925722}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &774244684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774244682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &774244685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774244682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &774244686
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 774244682}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &792189815
 Prefab:
   m_ObjectHideFlags: 0
@@ -4016,7 +4117,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4733887148613298, guid: aa54971d5920c22478571d274f058904, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1242802058838542, guid: aa54971d5920c22478571d274f058904, type: 2}
       propertyPath: m_IsActive
@@ -4192,6 +4293,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedy
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &839953484
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,7 +4472,7 @@ Transform:
   m_Children:
   - {fileID: 368122471}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &901070428
 GameObject:
@@ -4527,6 +4632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedx
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &913444537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4759,6 +4868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseSpeed
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &964439396
 GameObject:
   m_ObjectHideFlags: 0
@@ -5787,6 +5900,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: shrink
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!114 &1152825083 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114558143101802552, guid: aa54971d5920c22478571d274f058904,
@@ -6662,6 +6779,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOn
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1351986419
 GameObject:
   m_ObjectHideFlags: 0
@@ -6984,6 +7105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: floorLength
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1384285686
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,7 +7389,7 @@ Transform:
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1410204021
 MonoBehaviour:
@@ -7895,6 +8020,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOff
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1487546284
 GameObject:
   m_ObjectHideFlags: 0
@@ -8201,6 +8330,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateaz
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1541867966
 GameObject:
   m_ObjectHideFlags: 0
@@ -8627,6 +8760,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: maxNumberOfFlyingObjets
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1633790805
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,6 +9067,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOn
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1709687163
 GameObject:
   m_ObjectHideFlags: 0
@@ -8960,7 +9101,7 @@ Transform:
   - {fileID: 1053055414}
   - {fileID: 237098397}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1724598687
 GameObject:
@@ -9458,6 +9599,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateay
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1838776189
 GameObject:
   m_ObjectHideFlags: 0
@@ -9667,6 +9812,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOff
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!4 &1876967496 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4841809696084408, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -10020,6 +10169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedz
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &1899070591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10617,6 +10770,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateax
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!4 &2089998087 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4675207684653998, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -10790,6 +10947,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: growth
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
 --- !u!1 &2109711299 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1535630546677072, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -10859,10 +11020,6 @@ MonoBehaviour:
   - {fileID: 1325239084053564, guid: 241a6c43dbbf6e94c909f5201997968e, type: 2}
   - {fileID: 1799317139182926, guid: b159f11cc8b6cc044ad11caebb717fc1, type: 2}
   totalScoreText: {fileID: 1152825083}
-  inGameCanvas: {fileID: 462930906}
-  firstWindowCanvas: {fileID: 1158588713}
-  newGameCanvas: {fileID: 264223516}
-  chooseModeCanvas: {fileID: 1665098709}
   floorLength: 7
   maxNumberOfFlyingObjects: 35
   gameMode: 0
@@ -10903,6 +11060,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: 
+  inGameCanvas: {fileID: 462930906}
+  firstWindowCanvas: {fileID: 1158588713}
+  newGameCanvas: {fileID: 264223516}
+  chooseModeCanvas: {fileID: 1665098709}
 --- !u!4 &2132810796 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4529249179773074, guid: 262a3cd2e9a432348a94ffa0ac709ecb,

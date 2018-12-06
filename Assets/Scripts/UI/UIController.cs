@@ -7,6 +7,19 @@ public class UIController : MonoBehaviour {
 
 	public string param;
 
+    public Canvas inGameCanvas;
+    public Canvas firstWindowCanvas;
+    public Canvas newGameCanvas;
+    public Canvas chooseModeCanvas;
+
+    private void Start()
+    {
+        firstWindowCanvas.gameObject.SetActive(true);
+        newGameCanvas.gameObject.SetActive(false); 
+        inGameCanvas.gameObject.SetActive(false);
+        chooseModeCanvas.gameObject.SetActive(false);        
+    }
+
     public void OnChange()
     {
         if(param == "floorLength")
@@ -89,6 +102,13 @@ public class UIController : MonoBehaviour {
             flyingObjectComponent.rotateAmount.y = GameSettings.RotateAmountY;
             flyingObjectComponent.rotateAmount.z = GameSettings.RotateAmountZ;
         }
+
+        //ustawienie canvasow
+        firstWindowCanvas.gameObject.SetActive(false);
+        newGameCanvas.gameObject.SetActive(false); 
+        inGameCanvas.gameObject.SetActive(true); 
+
+
         if (LZWPlib.Core.Instance.isServer)
             TwisterManager.instance.StartGame();        
     }
@@ -106,10 +126,10 @@ public class UIController : MonoBehaviour {
 
     public void NewGameButtonClick()
     {
-        TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(false);
-        TwisterManager.instance.newGameCanvas.gameObject.SetActive(false); 
-        TwisterManager.instance.inGameCanvas.gameObject.SetActive(false);  
-        TwisterManager.instance.chooseModeCanvas.gameObject.SetActive(true);
+        firstWindowCanvas.gameObject.SetActive(false);
+        newGameCanvas.gameObject.SetActive(false); 
+        inGameCanvas.gameObject.SetActive(false);  
+        chooseModeCanvas.gameObject.SetActive(true);
     }
 
     public void ChooseGameMode()
@@ -119,10 +139,10 @@ public class UIController : MonoBehaviour {
 
     public void BackButtonClick()
     {
-        if(TwisterManager.instance.chooseModeCanvas.gameObject.active == true)
+        if(chooseModeCanvas.gameObject.active == true)
         {
-            TwisterManager.instance.chooseModeCanvas.gameObject.SetActive(false);
-            TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(true);
+            chooseModeCanvas.gameObject.SetActive(false);
+            firstWindowCanvas.gameObject.SetActive(true);
         }
         
        // TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(true);

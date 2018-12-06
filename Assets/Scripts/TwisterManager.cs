@@ -37,10 +37,7 @@ public class TwisterManager : MonoBehaviour {
     public GameObject sky;
     public GameObject[] cubes = new GameObject[5];
     public Text totalScoreText;
-    public Canvas inGameCanvas;
-    public Canvas firstWindowCanvas;
-    public Canvas newGameCanvas;
-    public Canvas chooseModeCanvas;
+
 
    // public GameObject temp;
 
@@ -70,11 +67,6 @@ public class TwisterManager : MonoBehaviour {
         
         //zerowanie modow, wyswietlenie odpowiedniego gui, init dla bota
         gameMode = Mode.NONE;
-
-        firstWindowCanvas.gameObject.SetActive(true);
-        newGameCanvas.gameObject.SetActive(false); 
-        inGameCanvas.gameObject.SetActive(false);
-        chooseModeCanvas.gameObject.SetActive(false);
 
         if (LZWPlib.Core.Instance.isServer){
             var ybot = player.transform.GetChild(0);
@@ -125,10 +117,6 @@ public class TwisterManager : MonoBehaviour {
         
         InitTwisterScene();
 
-        instance.firstWindowCanvas.gameObject.SetActive(false);
-        instance.newGameCanvas.gameObject.SetActive(false); 
-        instance.inGameCanvas.gameObject.SetActive(true); 
-
     }    
 
     private void InitTwisterScene()
@@ -163,10 +151,6 @@ public class TwisterManager : MonoBehaviour {
 
         GameObject.Destroy(temporaryFallingPreventor);
         player.transform.position = initYbotPosition;
-
-        firstWindowCanvas.gameObject.SetActive(false);
-        newGameCanvas.gameObject.SetActive(false); 
-        inGameCanvas.gameObject.SetActive(true); 
     }
 
     private void GenerateFloor()
