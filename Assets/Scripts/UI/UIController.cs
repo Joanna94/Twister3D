@@ -64,13 +64,6 @@ public class UIController : MonoBehaviour {
         Application.Quit();
     }
 
-    public void BackButtonClick()
-    {
-        TwisterManager.instance.beforeGameCanvas.gameObject.SetActive(true);
-        TwisterManager.instance.newGameCanvas.gameObject.SetActive(false); 
-        TwisterManager.instance.inGameCanvas.gameObject.SetActive(false);
-    }
-
     public void StartGameButtonClick()
     {
         //przepisanie zmiennych
@@ -113,9 +106,27 @@ public class UIController : MonoBehaviour {
 
     public void NewGameButtonClick()
     {
-        TwisterManager.instance.beforeGameCanvas.gameObject.SetActive(false);
-        TwisterManager.instance.newGameCanvas.gameObject.SetActive(true); 
+        TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(false);
+        TwisterManager.instance.newGameCanvas.gameObject.SetActive(false); 
         TwisterManager.instance.inGameCanvas.gameObject.SetActive(false);  
+        TwisterManager.instance.chooseModeCanvas.gameObject.SetActive(true);
     }
 
+    public void ChooseGameMode()
+    {
+
+    }
+
+    public void BackButtonClick()
+    {
+        if(TwisterManager.instance.chooseModeCanvas.gameObject.active == true)
+        {
+            TwisterManager.instance.chooseModeCanvas.gameObject.SetActive(false);
+            TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(true);
+        }
+        
+       // TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(true);
+       // TwisterManager.instance.newGameCanvas.gameObject.SetActive(false); 
+      //  TwisterManager.instance.inGameCanvas.gameObject.SetActive(false);
+    }
 }

@@ -15,6 +15,13 @@ public enum Color
     YELLOW //left hand
 }
 
+public enum Mode
+{
+    NONE,
+    OCEAN,
+    MOUNTAIN
+}
+
 public class TwisterManager : MonoBehaviour {
 
     public static TwisterManager instance;
@@ -25,20 +32,28 @@ public class TwisterManager : MonoBehaviour {
     public GameObject gate;
     public GameObject startLine;
     public GameObject fallingPreventor;
+    public GameObject ocean;
+    public GameObject mountain;
+    public GameObject sky;
     public GameObject[] cubes = new GameObject[5];
     public Text totalScoreText;
     public Canvas inGameCanvas;
-    public Canvas beforeGameCanvas;
+    public Canvas firstWindowCanvas;
     public Canvas newGameCanvas;
+    public Canvas chooseModeCanvas;
+
    // public GameObject temp;
 
     //zmienne ktore mozna modyfikowac
     public int floorLength = 8; //dlugosc poziomu
     public int maxNumberOfFlyingObjects = 40;
     
+    public Mode gameMode;
+
     //inne zmienne
     private float caveHeight = 2.147f;
     private float caveWidth = 2.147f;
+    private Vector3 initYbotPosition;
     private Vector3 initFloorPosition;
     private Vector3 linePosition;
     private Vector3 gatePosition;
@@ -48,21 +63,26 @@ public class TwisterManager : MonoBehaviour {
     private float pieceOfFloorLength;
     private  int totalScore = 0;
     private GameObject temporaryFallingPreventor;
-    private Vector3 ybotPosition;
+
 
 	// Use this for initialization
 	void Start () {
         
-        beforeGameCanvas.gameObject.SetActive(true);
+        //zerowanie modow, wyswietlenie odpowiedniego gui, init dla bota
+        gameMode = Mode.NONE;
+
+        firstWindowCanvas.gameObject.SetActive(true);
         newGameCanvas.gameObject.SetActive(false); 
         inGameCanvas.gameObject.SetActive(false);
+        chooseModeCanvas.gameObject.SetActive(false);
 
         if (LZWPlib.Core.Instance.isServer){
             var ybot = player.transform.GetChild(0);
-            ybotPosition = ybot.transform.position;
-            temporaryFallingPreventor = (GameObject)Network.Instantiate(fallingPreventor, new Vector3(ybotPosition.x, ybotPosition.y - 0.3f, ybotPosition.z), new Quaternion(), 0);
+            initYbotPosition = ybot.transform.position;
+            temporaryFallingPreventor = (GameObject)Network.Instantiate(fallingPreventor, new Vector3(initYbotPosition.x, initYbotPosition.y - 0.3f, initYbotPosition.z), new Quaternion(), 0);
         }
-        
+
+        //StartGame();
        // Renderer renderer = temp.GetComponent<Renderer>();
       //  Shader shader = Shader.Find("Waves");
       //  renderer.material.SetVector("_WaveA", new Vector4(-180, 6,1,50)); //-180,2,1,30
@@ -72,6 +92,22 @@ public class TwisterManager : MonoBehaviour {
 	void Update () {
 
         if (!LZWPlib.Core.Instance.isServer){
+            if(gameMode == Mode.NONE)
+            {
+                ocean.gameObject.SetActive(false);
+                mountain.gameObject.SetActive(false);
+
+            }else if(gameMode == Mode.OCEAN)
+            {
+                ocean.gameObject.SetActive(true);
+                mountain.gameObject.SetActive(false);
+
+            }else if(gameMode == Mode.MOUNTAIN)
+            {
+                ocean.gameObject.SetActive(false);
+                mountain.gameObject.SetActive(true);
+            }
+
             GameObject additionalUI = GameObject.FindGameObjectWithTag("UI");
             GameObject.Destroy(additionalUI);
         }
@@ -84,22 +120,22 @@ public class TwisterManager : MonoBehaviour {
   
     public void StartGame()
     {
-        //inicjalizacja sceny
-        // wlaczenie odpowiedniego UI
-        //zerowanie punktow
-
+        totalScore = 0; 
+        totalScoreText.text = totalScore.ToString();          
+        
         InitTwisterScene();
-        instance.beforeGameCanvas.gameObject.SetActive(false);
+
+        instance.firstWindowCanvas.gameObject.SetActive(false);
         instance.newGameCanvas.gameObject.SetActive(false); 
         instance.inGameCanvas.gameObject.SetActive(true); 
-        totalScore = 0; //czy jeszcze ustawianie tekstu w ui?
+
     }    
 
     private void InitTwisterScene()
-    {
-        initFloorPosition = new Vector3(0.02f, ybotPosition.y, 0.5f);
+    { 
+        initFloorPosition = new Vector3(initYbotPosition.x, initYbotPosition.y, initYbotPosition.z + 1f);
         pieceOfFloorLength = pieceOfFloor.gameObject.transform.localScale.z;
-        initFallingPreventorPosition = new Vector3(0.02f, initFloorPosition.y - 0.2f, 0.5f);
+        initFallingPreventorPosition = new Vector3(initYbotPosition.x, initFloorPosition.y - 0.2f, initYbotPosition.z);
    
         GenerateFloor();
         GenerateGate();
@@ -109,14 +145,14 @@ public class TwisterManager : MonoBehaviour {
         
         SerializeScene();
         GameObject.Destroy(temporaryFallingPreventor);
-        player.transform.position = ybotPosition;
+        player.transform.position = initYbotPosition;
     }
 
     public void InitSavedTwisterScene(string path)
     {
         DeserializeScene(path);
 
-        initFloorPosition = new Vector3(0.02f, ybotPosition.y, 0.5f);
+        initFloorPosition = new Vector3(0.02f, initYbotPosition.y, 0.5f);
         pieceOfFloorLength = pieceOfFloor.gameObject.transform.localScale.z;
         initFallingPreventorPosition = new Vector3(0.02f, initFloorPosition.y - 0.2f, 0.5f);
 
@@ -126,9 +162,9 @@ public class TwisterManager : MonoBehaviour {
         GenerateFallingPreventor();
 
         GameObject.Destroy(temporaryFallingPreventor);
-        player.transform.position = ybotPosition;
+        player.transform.position = initYbotPosition;
 
-        beforeGameCanvas.gameObject.SetActive(false);
+        firstWindowCanvas.gameObject.SetActive(false);
         newGameCanvas.gameObject.SetActive(false); 
         inGameCanvas.gameObject.SetActive(true); 
     }
@@ -165,7 +201,7 @@ public class TwisterManager : MonoBehaviour {
     private void GenerateStartLine()
     { 
         Vector3 firstPieceOfFloorPositon = floor[0].transform.position;
-        linePosition = new Vector3(0f, initFloorPosition.y + 1.3f, firstPieceOfFloorPositon.z + pieceOfFloorLength * 0.01f);
+        linePosition = new Vector3(initYbotPosition.x, initFloorPosition.y + 1.3f, initYbotPosition.z + 0.5f);
         Network.Instantiate(startLine, linePosition, new Quaternion(), 0);
     }
 
@@ -209,7 +245,7 @@ public class TwisterManager : MonoBehaviour {
 
                 foreach(GameObject obj in flyingObjects)
                 {
-                    if(obj.transform.position == randPosition)
+                    if(obj.transform.position == randPosition) //tu moge ew. zmienic by klocki byly w wiekszej minimalnej odl od siebie
                         isTooClose = true;
                 }
 
