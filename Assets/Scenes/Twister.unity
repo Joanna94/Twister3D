@@ -325,7 +325,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264349}
+      - m_Target: {fileID: 2127264352}
         m_MethodName: StartGameButtonClick
         m_Mode: 1
         m_Arguments:
@@ -5057,7 +5057,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264349}
+      - m_Target: {fileID: 2127264352}
         m_MethodName: ExitButtonClick
         m_Mode: 1
         m_Arguments:
@@ -6761,7 +6761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264349}
+      - m_Target: {fileID: 2127264352}
         m_MethodName: BackButtonClick
         m_Mode: 1
         m_Arguments:
@@ -9918,6 +9918,7 @@ GameObject:
   - component: {fileID: 2127264350}
   - component: {fileID: 2127264349}
   - component: {fileID: 2127264351}
+  - component: {fileID: 2127264352}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9953,7 +9954,6 @@ MonoBehaviour:
   inGameCanvas: {fileID: 462930906}
   beforeGameCanvas: {fileID: 1158588713}
   newGameCanvas: {fileID: 264223516}
-  temp: {fileID: 368122468}
   floorLength: 7
   maxNumberOfFlyingObjects: 35
 --- !u!4 &2127264350
@@ -9981,6 +9981,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   port: 5000
+--- !u!114 &2127264352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2127264348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: 
 --- !u!4 &2132810796 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4529249179773074, guid: 262a3cd2e9a432348a94ffa0ac709ecb,

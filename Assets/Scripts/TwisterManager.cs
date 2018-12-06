@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using LZWPlib;
 using UnityEngine.UI;
-using UnityEditor;
 using System.IO;
 
 public enum Color
@@ -15,12 +14,6 @@ public enum Color
     RED, //left foot
     YELLOW //left hand
 }
-
-/*
-    - odczytanie zapisanej sceny jest ale nie ma synchronizacji z mocapem
-    - nie da sie parametryzowac wody
-    - ybot jest zepsuty
-*/
 
 public class TwisterManager : MonoBehaviour {
 
@@ -88,7 +81,20 @@ public class TwisterManager : MonoBehaviour {
     {
         instance = this;
     }
-    
+  
+    public void StartGame()
+    {
+        //inicjalizacja sceny
+        // wlaczenie odpowiedniego UI
+        //zerowanie punktow
+
+        InitTwisterScene();
+        instance.beforeGameCanvas.gameObject.SetActive(false);
+        instance.newGameCanvas.gameObject.SetActive(false); 
+        instance.inGameCanvas.gameObject.SetActive(true); 
+        totalScore = 0; //czy jeszcze ustawianie tekstu w ui?
+    }    
+
     private void InitTwisterScene()
     {
         initFloorPosition = new Vector3(0.02f, ybotPosition.y, 0.5f);
@@ -102,7 +108,29 @@ public class TwisterManager : MonoBehaviour {
         GenerateFlyingObjects();
         
         SerializeScene();
+        GameObject.Destroy(temporaryFallingPreventor);
         player.transform.position = ybotPosition;
+    }
+
+    public void InitSavedTwisterScene(string path)
+    {
+        DeserializeScene(path);
+
+        initFloorPosition = new Vector3(0.02f, ybotPosition.y, 0.5f);
+        pieceOfFloorLength = pieceOfFloor.gameObject.transform.localScale.z;
+        initFallingPreventorPosition = new Vector3(0.02f, initFloorPosition.y - 0.2f, 0.5f);
+
+        GenerateFloor();
+        GenerateGate();
+        GenerateStartLine();
+        GenerateFallingPreventor();
+
+        GameObject.Destroy(temporaryFallingPreventor);
+        player.transform.position = ybotPosition;
+
+        beforeGameCanvas.gameObject.SetActive(false);
+        newGameCanvas.gameObject.SetActive(false); 
+        inGameCanvas.gameObject.SetActive(true); 
     }
 
     private void GenerateFloor()
@@ -301,87 +329,5 @@ public class TwisterManager : MonoBehaviour {
         component.rotateAmount = new Vector3(obj.RotateAmount[0], obj.RotateAmount[1], obj.RotateAmount[2]);
         component.rotateDirection = new Vector3(obj.RotateDirection[0], obj.RotateDirection[1], obj.RotateDirection[2]);
         component.rotateSpeed = obj.RotateSpeed;    
-    }
-
-    public void InitSavedTwisterScene(string path)
-    {
-        DeserializeScene(path);
-
-        initFloorPosition = new Vector3(0.02f, ybotPosition.y, 0.5f);
-        pieceOfFloorLength = pieceOfFloor.gameObject.transform.localScale.z;
-        initFallingPreventorPosition = new Vector3(0.02f, initFloorPosition.y - 0.2f, 0.5f);
-
-        GenerateFloor();
-        GenerateGate();
-        GenerateStartLine();
-        GenerateFallingPreventor();
-    }
-
-    public void NewGameButtonClick()
-    {
-        beforeGameCanvas.gameObject.SetActive(false);
-        newGameCanvas.gameObject.SetActive(true); 
-        inGameCanvas.gameObject.SetActive(false);  
-    }
-
-    public void LoadGameButtonClick()
-    {
-        string path = EditorUtility.OpenFilePanel("Twister - Wybierz plik xml", "", "xml");
-        if(path.Length != 0)
-        {
-            if (LZWPlib.Core.Instance.isServer){
-                GameObject.Destroy(temporaryFallingPreventor);
-                InitSavedTwisterScene(path);
-                beforeGameCanvas.gameObject.SetActive(false);
-                newGameCanvas.gameObject.SetActive(false); 
-                inGameCanvas.gameObject.SetActive(true); 
-            }
-        }
-    }
-
-    public void StartGameButtonClick()
-    {
-        //przepisanie zmiennych
-        var playerComponent = player.GetComponent<PlayerController>();
-        playerComponent.moveSpeed = GameSettings.Speed;
-
-        floorLength = GameSettings.FloorLength;
-        maxNumberOfFlyingObjects = GameSettings.MaxNumberOfFlyingObjects;
-
-        foreach(GameObject c in cubes)
-        {
-            var flyingObjectComponent = c.GetComponent<FlyingObjectController>();
-            flyingObjectComponent.pulse = GameSettings.Pulse;
-            flyingObjectComponent.pulseSpeed = GameSettings.PulseSpeed;
-            flyingObjectComponent.pulseGrowthBound = GameSettings.PulseGrowthBound;
-            flyingObjectComponent.pulseShrinkBound = GameSettings.PulseShrinkBound;
-            flyingObjectComponent.rotate = GameSettings.Rotate;
-            flyingObjectComponent.rotateSpeed = GameSettings.RotateSpeed;
-            flyingObjectComponent.rotateDirection.x = GameSettings.RotateDirectionX;
-            flyingObjectComponent.rotateDirection.y = GameSettings.RotateDirectionY;
-            flyingObjectComponent.rotateDirection.z = GameSettings.RotateDirectionZ;
-            flyingObjectComponent.rotateAmount.x = GameSettings.RotateAmountX;
-            flyingObjectComponent.rotateAmount.y = GameSettings.RotateAmountY;
-            flyingObjectComponent.rotateAmount.z = GameSettings.RotateAmountZ;
-        }
-        if (LZWPlib.Core.Instance.isServer){
-            GameObject.Destroy(temporaryFallingPreventor);
-            InitTwisterScene();
-            beforeGameCanvas.gameObject.SetActive(false);
-            newGameCanvas.gameObject.SetActive(false); 
-            inGameCanvas.gameObject.SetActive(true); 
-        }
-    }
-
-    public void ExitButtonClick()
-    {
-        Application.Quit();
-    }
-
-    public void BackButtonClick()
-    {
-        beforeGameCanvas.gameObject.SetActive(true);
-        newGameCanvas.gameObject.SetActive(false); 
-        inGameCanvas.gameObject.SetActive(false);
     }
 }
