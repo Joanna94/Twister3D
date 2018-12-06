@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour {
     public Canvas oceanCreatorCanvas = null;
     public Canvas mountainCreatorCanvas = null;
 
+    public InputField temp;
+
     private void Start()
     {
         firstWindowCanvas.gameObject.SetActive(true);

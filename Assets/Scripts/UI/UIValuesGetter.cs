@@ -87,4 +87,5 @@ public class UIValuesGetter : MonoBehaviour {
         int.TryParse(this.GetComponent<InputField>().text, out i);
         return i;
     }
+
 }

@@ -71,7 +71,7 @@ public class TwisterManager : MonoBehaviour {
             temporaryFallingPreventor = (GameObject)Network.Instantiate(fallingPreventor, new Vector3(initYbotPosition.x, initYbotPosition.y - 0.3f, initYbotPosition.z), new Quaternion(), 0);
         }
 
-        //StartGame();
+        StartGame();
 	}
 	
 	// Update is called once per frame
