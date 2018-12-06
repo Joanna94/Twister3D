@@ -37,6 +37,7 @@ public class TwisterManager : MonoBehaviour {
     public Canvas inGameCanvas;
     public Canvas beforeGameCanvas;
     public Canvas newGameCanvas;
+   // public GameObject temp;
 
     //zmienne ktore mozna modyfikowac
     public int floorLength = 8; //dlugosc poziomu
@@ -69,6 +70,9 @@ public class TwisterManager : MonoBehaviour {
             temporaryFallingPreventor = (GameObject)Network.Instantiate(fallingPreventor, new Vector3(ybotPosition.x, ybotPosition.y - 0.3f, ybotPosition.z), new Quaternion(), 0);
         }
         
+       // Renderer renderer = temp.GetComponent<Renderer>();
+      //  Shader shader = Shader.Find("Waves");
+      //  renderer.material.SetVector("_WaveA", new Vector4(-180, 6,1,50)); //-180,2,1,30
 	}
 	
 	// Update is called once per frame
@@ -98,6 +102,7 @@ public class TwisterManager : MonoBehaviour {
         GenerateFlyingObjects();
         
         SerializeScene();
+        player.transform.position = ybotPosition;
     }
 
     private void GenerateFloor()
