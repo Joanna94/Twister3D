@@ -38,9 +38,6 @@ public class TwisterManager : MonoBehaviour {
     public GameObject[] cubes = new GameObject[5];
     public Text totalScoreText;
 
-
-   // public GameObject temp;
-
     //zmienne ktore mozna modyfikowac
     public int floorLength = 8; //dlugosc poziomu
     public int maxNumberOfFlyingObjects = 40;
@@ -74,10 +71,7 @@ public class TwisterManager : MonoBehaviour {
             temporaryFallingPreventor = (GameObject)Network.Instantiate(fallingPreventor, new Vector3(initYbotPosition.x, initYbotPosition.y - 0.3f, initYbotPosition.z), new Quaternion(), 0);
         }
 
-        StartGame();
-       // Renderer renderer = temp.GetComponent<Renderer>();
-      //  Shader shader = Shader.Find("Waves");
-      //  renderer.material.SetVector("_WaveA", new Vector4(-180, 6,1,50)); //-180,2,1,30
+        //StartGame();
 	}
 	
 	// Update is called once per frame
@@ -115,6 +109,25 @@ public class TwisterManager : MonoBehaviour {
         totalScore = 0; 
         totalScoreText.text = totalScore.ToString();          
         
+
+        if (LZWPlib.Core.Instance.isServer){
+            if(gameMode == Mode.OCEAN)
+            {
+                ocean.gameObject.SetActive(true);
+                mountain.gameObject.SetActive(false);
+
+            }else if(gameMode == Mode.MOUNTAIN)
+            {
+                ocean.gameObject.SetActive(false);
+                mountain.gameObject.SetActive(true);
+            }
+        }
+
+        if (!LZWPlib.Core.Instance.isServer){
+            GameObject additionalUI = GameObject.FindGameObjectWithTag("UI");
+            GameObject.Destroy(additionalUI);
+        }
+
         InitTwisterScene();
 
     }    

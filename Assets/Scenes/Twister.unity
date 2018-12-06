@@ -524,7 +524,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 43298133}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -585,18 +585,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 43298128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: aydir
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &46276901
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,8 +693,8 @@ RectTransform:
   m_Father: {fileID: 2116173345}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1100,7 +1092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &119782790
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1224,18 +1216,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 134437187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseSpeed
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &134437190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,18 +1374,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 146748611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: floorLength
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &146748614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,7 +1728,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 171332507}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -1813,18 +1789,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 171332502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: asteepless
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &173122877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,18 +1840,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 173122877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateaz
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &173122880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2306,7 +2266,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 206477276}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -2367,18 +2327,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 206477271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: csteepless
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &218851728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,15 +2775,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: speed
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &247818378
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,7 +4125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &368122469
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4225,11 +4174,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 368122468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.311775, y: 0.5475254, z: -40.330097}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 892692665}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &368122472
 MonoBehaviour:
@@ -4439,18 +4388,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 383016666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedz
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &383016669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5398,18 +5339,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 491153277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateax
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &491153280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5637,18 +5570,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 511254286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOff
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &511254289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5780,18 +5705,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 533782579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOn
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &533782582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6036,7 +5953,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 539913704}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -6057,18 +5974,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 539913701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: fa5034790c67cfd4fb38b327b6a5f603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: skySpeed
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
+  skySlider: {fileID: 539913703}
+  skySpeedValue: {fileID: 3803329}
 --- !u!1 &545167940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6425,7 +6335,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 591859049}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -6486,18 +6396,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 591859044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: cxdir
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &596704852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6692,18 +6594,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 606789405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOff
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &606789408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8951,7 +8845,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 742132978}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -9012,18 +8906,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 742132973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: blength
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &743573347
 GameObject:
   m_ObjectHideFlags: 0
@@ -9255,15 +9141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotateSpeed
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &761575830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9851,15 +9734,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotatedy
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &839953484
 GameObject:
   m_ObjectHideFlags: 0
@@ -10156,35 +10036,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 882089171}
---- !u!1 &892692664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 892692665}
-  m_Layer: 0
-  m_Name: OceanWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &892692665
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 892692664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.311775, y: -5.5475254, z: 40.330097}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 368122471}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &893541684
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,15 +10267,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotatedx
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &913444537
 GameObject:
   m_ObjectHideFlags: 0
@@ -10801,15 +10649,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: pulseSpeed
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &938129529
 GameObject:
   m_ObjectHideFlags: 0
@@ -11519,7 +11364,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1009764282}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -11580,18 +11425,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1009764277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: alength
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1011225309
 GameObject:
   m_ObjectHideFlags: 0
@@ -12397,7 +12234,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1078440110}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -12458,18 +12295,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1078440105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: clength
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1084202033
 GameObject:
   m_ObjectHideFlags: 0
@@ -13112,15 +12941,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: shrink
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1152825083 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114558143101802552, guid: aa54971d5920c22478571d274f058904,
@@ -13786,18 +13612,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225616351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: shrink
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1225616354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14100,18 +13918,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247946772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateSpeed
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1247946775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14312,7 +14122,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1256548570}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -14373,18 +14183,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1256548565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: bsteepless
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1258035372
 GameObject:
   m_ObjectHideFlags: 0
@@ -15005,15 +14807,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: pulseOn
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1341105372
 GameObject:
   m_ObjectHideFlags: 0
@@ -15061,18 +14860,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1341105372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateay
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1341105375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15226,18 +15017,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344344830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOn
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1344344833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15416,7 +15199,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1351216868}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -15477,18 +15260,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351216863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: wavesHeight
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1351986419
 GameObject:
   m_ObjectHideFlags: 0
@@ -15884,15 +15659,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: floorLength
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1380390255
 GameObject:
   m_ObjectHideFlags: 0
@@ -17009,7 +16781,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1445068898}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -17070,18 +16842,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1445068893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: cydir
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1446425362
 GameObject:
   m_ObjectHideFlags: 0
@@ -17129,18 +16893,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1446425362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedy
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1446425365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17813,15 +17569,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotateOff
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1487546284
 GameObject:
   m_ObjectHideFlags: 0
@@ -17989,7 +17742,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1491703061}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -18050,18 +17803,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1491703056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: axdir
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1502898280
 GameObject:
   m_ObjectHideFlags: 0
@@ -18441,15 +18186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotateaz
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1541867966
 GameObject:
   m_ObjectHideFlags: 0
@@ -18774,7 +18516,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 1568754976}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -18835,18 +18577,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1568754971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: bydir
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1602528750
 GameObject:
   m_ObjectHideFlags: 0
@@ -19200,15 +18934,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: maxNumberOfFlyingObjets
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1631346643
 GameObject:
   m_ObjectHideFlags: 0
@@ -19659,15 +19390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotateOn
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1697357837
 GameObject:
   m_ObjectHideFlags: 0
@@ -20092,18 +19820,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1768344279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedx
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1768344282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20844,15 +20564,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotateay
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1838776189
 GameObject:
   m_ObjectHideFlags: 0
@@ -20974,18 +20691,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1840178422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: maxNumberOfFlyingObjets
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
+  param: maxNumberOfFlyingObjects
 --- !u!114 &1840178425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21301,15 +21010,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: pulseOff
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!4 &1876967496 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4841809696084408, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -21821,15 +21527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotatedz
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &1898236581
 GameObject:
   m_ObjectHideFlags: 0
@@ -22231,7 +21934,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22680,18 +22383,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1990922650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: growth
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &1990922653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23030,15 +22725,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: rotateax
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &2009135154
 GameObject:
   m_ObjectHideFlags: 0
@@ -23132,7 +22824,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127264352}
+      - m_Target: {fileID: 2009135159}
         m_MethodName: OnChange
         m_Mode: 1
         m_Arguments:
@@ -23193,18 +22885,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2009135154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: bxdir
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &2030264238
 GameObject:
   m_ObjectHideFlags: 0
@@ -23599,15 +23283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: growth
-  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!1 &2109711299 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1535630546677072, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -23678,18 +23359,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2115998174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Script: {fileID: 11500000, guid: 22257e9281d2c424f8ec65bff8a0df5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   param: speed
-  skySlider: {fileID: 0}
-  inGameCanvas: {fileID: 0}
-  firstWindowCanvas: {fileID: 0}
-  newGameCanvas: {fileID: 0}
-  chooseModeCanvas: {fileID: 0}
-  oceanCreatorCanvas: {fileID: 0}
-  mountainCreatorCanvas: {fileID: 0}
-  skySpeedValue: {fileID: 0}
 --- !u!114 &2115998177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23867,7 +23540,7 @@ MonoBehaviour:
   startLine: {fileID: 1322853143620048, guid: 96f2eb8211595ef48b058e4d57e907cc, type: 2}
   fallingPreventor: {fileID: 1463303378284146, guid: da99d957081ed9b418a7739f046c3e9d,
     type: 2}
-  ocean: {fileID: 892692664}
+  ocean: {fileID: 368122468}
   mountain: {fileID: 1709687163}
   sky: {fileID: 1410204016}
   cubes:
@@ -23916,15 +23589,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  param: 
-  skySlider: {fileID: 539913703}
   inGameCanvas: {fileID: 462930906}
   firstWindowCanvas: {fileID: 1158588713}
   newGameCanvas: {fileID: 264223516}
   chooseModeCanvas: {fileID: 1665098709}
   oceanCreatorCanvas: {fileID: 119782793}
   mountainCreatorCanvas: {fileID: 953467302}
-  skySpeedValue: {fileID: 3803329}
 --- !u!4 &2132810796 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4529249179773074, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
