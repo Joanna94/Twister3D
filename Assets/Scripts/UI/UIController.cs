@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	public string param;
+    public Slider skySlider;
 
     public Canvas inGameCanvas;
     public Canvas firstWindowCanvas;
@@ -13,6 +14,8 @@ public class UIController : MonoBehaviour {
     public Canvas chooseModeCanvas;
     public Canvas oceanCreatorCanvas;
     public Canvas mountainCreatorCanvas;
+
+    public Text skySpeedValue;
 
     private void Start()
     {
@@ -60,6 +63,40 @@ public class UIController : MonoBehaviour {
             GameSettings.RotateAmountY = ParseToFloat();
         else if(param == "rotateaz")
             GameSettings.RotateAmountZ = ParseToFloat();
+        else if(param == "skySpeed")
+            GameSettings.SkySpeed = ParseToFloat();
+        else if(param == "axdir")
+            GameSettings.WaveADirX = ParseToFloat();
+        else if(param == "aydir")
+            GameSettings.WaveADirY = ParseToFloat();
+        else if(param == "asteepless")
+            GameSettings.WaveASteepless = ParseToFloat();
+        else if(param == "alength")
+            GameSettings.WaveALength = ParseToFloat();
+        else if(param == "bxdir")
+            GameSettings.WaveBDirX = ParseToFloat();
+        else if(param == "bydir")
+            GameSettings.WaveBDirY = ParseToFloat();
+        else if(param == "bsteepless")
+            GameSettings.WaveBSteepless = ParseToFloat();
+        else if(param =="blength")
+            GameSettings.WaveBLength = ParseToFloat();
+        else if(param == "cxdir")
+            GameSettings.WaveCDirX = ParseToFloat();
+        else if(param == "cydir")
+            GameSettings.WaveCDirY = ParseToFloat();
+        else if(param == "csteepless")
+            GameSettings.WaveCSteepless = ParseToFloat();
+        else if(param == "clength")
+            GameSettings.WaveCLength = ParseToFloat();
+        else if(param == "wavesHeight")
+            GameSettings.WavesHeight = ParseToFloat();
+
+        if(skySlider != null){
+            GameSettings.SkySpeed = skySlider.value;
+            skySpeedValue.text = skySlider.value.ToString();
+        }
+
     }
 
     private float ParseToFloat()

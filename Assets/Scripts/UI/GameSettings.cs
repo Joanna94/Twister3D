@@ -26,4 +26,25 @@ public static class GameSettings {
     public static float RotateAmountY {get; set;}
     public static float RotateAmountZ {get; set;}
 
+    //sky data
+    public static float SkySpeed{get; set;}
+
+    //water "ocean" data
+    //wave A
+    public static float WaveADirX {get; set;}
+    public static float WaveADirY {get; set;}
+    public static float WaveASteepless {get; set;}
+    public static float WaveALength {get; set;}
+    //wave B
+    public static float WaveBDirX {get; set;}
+    public static float WaveBDirY {get; set;}
+    public static float WaveBSteepless {get; set;}
+    public static float WaveBLength {get; set;}
+    //wave C
+    public static float WaveCDirX {get; set;}
+    public static float WaveCDirY {get; set;}
+    public static float WaveCSteepless {get; set;}
+    public static float WaveCLength {get; set;}
+
+    public static float WavesHeight {get; set;}
 }

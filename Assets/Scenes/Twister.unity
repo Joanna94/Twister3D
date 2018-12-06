@@ -118,6 +118,80 @@ Transform:
   m_PrefabParentObject: {fileID: 4733887148613298, guid: aa54971d5920c22478571d274f058904,
     type: 2}
   m_PrefabInternal: {fileID: 792189815}
+--- !u!1 &3803327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 3803328}
+  - component: {fileID: 3803330}
+  - component: {fileID: 3803329}
+  m_Layer: 0
+  m_Name: SliderValueNumber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3803328
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3803327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539913702}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -20}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3803329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3803327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &3803330
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3803327}
 --- !u!1 &27539781
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +442,7 @@ GameObject:
   - component: {fileID: 43298132}
   - component: {fileID: 43298131}
   - component: {fileID: 43298130}
+  - component: {fileID: 43298133}
   m_Layer: 0
   m_Name: WaveADirYInputField
   m_TagString: Untagged
@@ -448,7 +523,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -491,6 +577,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43298128}
+--- !u!114 &43298133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43298128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: aydir
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &46276901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,12 +1228,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseSpeed
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &134437190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,12 +1394,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: floorLength
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &146748614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,6 +1670,7 @@ GameObject:
   - component: {fileID: 171332506}
   - component: {fileID: 171332505}
   - component: {fileID: 171332504}
+  - component: {fileID: 171332507}
   m_Layer: 0
   m_Name: WaveASteeplessInputField
   m_TagString: Untagged
@@ -1640,7 +1751,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -1683,6 +1805,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 171332502}
+--- !u!114 &171332507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171332502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: asteepless
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &173122877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,12 +1876,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateaz
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &173122880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,6 +2224,7 @@ GameObject:
   - component: {fileID: 206477275}
   - component: {fileID: 206477274}
   - component: {fileID: 206477273}
+  - component: {fileID: 206477276}
   m_Layer: 0
   m_Name: WaveCSteeplessInputField
   m_TagString: Untagged
@@ -2160,7 +2305,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -2203,6 +2359,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206477271}
+--- !u!114 &206477276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 206477271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: csteepless
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &218851728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,12 +2824,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: speed
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &247818378
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,12 +4443,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedz
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &383016669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,12 +5402,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateax
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &491153280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5459,12 +5641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOff
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &511254289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5600,12 +5784,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOn
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &533782582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5774,6 +5960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539913702}
   - component: {fileID: 539913703}
+  - component: {fileID: 539913704}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -5794,6 +5981,7 @@ RectTransform:
   - {fileID: 1335007498}
   - {fileID: 27539782}
   - {fileID: 2116173345}
+  - {fileID: 3803328}
   m_Father: {fileID: 579623457}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5843,13 +6031,44 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: -10
   m_MaxValue: 10
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &539913704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539913701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: skySpeed
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &545167940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +6343,7 @@ GameObject:
   - component: {fileID: 591859048}
   - component: {fileID: 591859047}
   - component: {fileID: 591859046}
+  - component: {fileID: 591859049}
   m_Layer: 0
   m_Name: WaveCDirXInputField
   m_TagString: Untagged
@@ -6204,7 +6424,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -6247,6 +6478,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591859044}
+--- !u!114 &591859049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591859044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: cxdir
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &596704852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6445,12 +6696,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOff
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &606789408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8616,6 +8869,7 @@ GameObject:
   - component: {fileID: 742132977}
   - component: {fileID: 742132976}
   - component: {fileID: 742132975}
+  - component: {fileID: 742132978}
   m_Layer: 0
   m_Name: WaveBLengthInputField
   m_TagString: Untagged
@@ -8696,7 +8950,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -8739,6 +9004,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 742132973}
+--- !u!114 &742132978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 742132973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: blength
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &743573347
 GameObject:
   m_ObjectHideFlags: 0
@@ -8971,12 +9256,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateSpeed
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &761575830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9565,12 +9852,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedy
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &839953484
 GameObject:
   m_ObjectHideFlags: 0
@@ -10128,12 +10417,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedx
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &913444537
 GameObject:
   m_ObjectHideFlags: 0
@@ -10511,12 +10802,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseSpeed
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &938129529
 GameObject:
   m_ObjectHideFlags: 0
@@ -11144,6 +11437,7 @@ GameObject:
   - component: {fileID: 1009764281}
   - component: {fileID: 1009764280}
   - component: {fileID: 1009764279}
+  - component: {fileID: 1009764282}
   m_Layer: 0
   m_Name: WaveALengthInputField
   m_TagString: Untagged
@@ -11224,7 +11518,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -11267,6 +11572,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1009764277}
+--- !u!114 &1009764282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009764277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: alength
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1011225309
 GameObject:
   m_ObjectHideFlags: 0
@@ -11990,6 +12315,7 @@ GameObject:
   - component: {fileID: 1078440109}
   - component: {fileID: 1078440108}
   - component: {fileID: 1078440107}
+  - component: {fileID: 1078440110}
   m_Layer: 0
   m_Name: WaveCLengthInputField
   m_TagString: Untagged
@@ -12070,7 +12396,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -12113,6 +12450,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1078440105}
+--- !u!114 &1078440110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078440105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: clength
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1084202033
 GameObject:
   m_ObjectHideFlags: 0
@@ -12756,12 +13113,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: shrink
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1152825083 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114558143101802552, guid: aa54971d5920c22478571d274f058904,
@@ -13431,12 +13790,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: shrink
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1225616354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13743,12 +14104,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateSpeed
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1247946775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13867,6 +14230,7 @@ GameObject:
   - component: {fileID: 1256548569}
   - component: {fileID: 1256548568}
   - component: {fileID: 1256548567}
+  - component: {fileID: 1256548570}
   m_Layer: 0
   m_Name: WaveBSteeplessInputField
   m_TagString: Untagged
@@ -13947,7 +14311,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -13990,6 +14365,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1256548565}
+--- !u!114 &1256548570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256548565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: bsteepless
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1258035372
 GameObject:
   m_ObjectHideFlags: 0
@@ -14611,12 +15006,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOn
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1341105372
 GameObject:
   m_ObjectHideFlags: 0
@@ -14668,12 +15065,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateay
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1341105375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14831,12 +15230,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOn
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1344344833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14933,6 +15334,7 @@ GameObject:
   - component: {fileID: 1351216867}
   - component: {fileID: 1351216866}
   - component: {fileID: 1351216865}
+  - component: {fileID: 1351216868}
   m_Layer: 0
   m_Name: HeightInputField
   m_TagString: Untagged
@@ -15013,7 +15415,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -15056,6 +15469,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351216863}
+--- !u!114 &1351216868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351216863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: wavesHeight
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1351986419
 GameObject:
   m_ObjectHideFlags: 0
@@ -15452,12 +15885,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: floorLength
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1380390255
 GameObject:
   m_ObjectHideFlags: 0
@@ -16492,6 +16927,7 @@ GameObject:
   - component: {fileID: 1445068897}
   - component: {fileID: 1445068896}
   - component: {fileID: 1445068895}
+  - component: {fileID: 1445068898}
   m_Layer: 0
   m_Name: WaveCDirYInputField
   m_TagString: Untagged
@@ -16572,7 +17008,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -16615,6 +17062,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1445068893}
+--- !u!114 &1445068898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445068893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: cydir
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1446425362
 GameObject:
   m_ObjectHideFlags: 0
@@ -16666,12 +17133,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedy
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1446425365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17345,12 +17814,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOff
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1487546284
 GameObject:
   m_ObjectHideFlags: 0
@@ -17436,6 +17907,7 @@ GameObject:
   - component: {fileID: 1491703060}
   - component: {fileID: 1491703059}
   - component: {fileID: 1491703058}
+  - component: {fileID: 1491703061}
   m_Layer: 0
   m_Name: WaveADirXInputField
   m_TagString: Untagged
@@ -17516,7 +17988,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -17559,6 +18042,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1491703056}
+--- !u!114 &1491703061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491703056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: axdir
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1502898280
 GameObject:
   m_ObjectHideFlags: 0
@@ -17939,12 +18442,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateaz
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1541867966
 GameObject:
   m_ObjectHideFlags: 0
@@ -18187,6 +18692,7 @@ GameObject:
   - component: {fileID: 1568754975}
   - component: {fileID: 1568754974}
   - component: {fileID: 1568754973}
+  - component: {fileID: 1568754976}
   m_Layer: 0
   m_Name: WaveBDirYInputField
   m_TagString: Untagged
@@ -18267,7 +18773,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -18310,6 +18827,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568754971}
+--- !u!114 &1568754976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1568754971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: bydir
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1602528750
 GameObject:
   m_ObjectHideFlags: 0
@@ -18664,12 +19201,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: maxNumberOfFlyingObjets
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1631346643
 GameObject:
   m_ObjectHideFlags: 0
@@ -19121,12 +19660,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateOn
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1697357837
 GameObject:
   m_ObjectHideFlags: 0
@@ -19555,12 +20096,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedx
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1768344282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20302,12 +20845,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateay
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1838776189
 GameObject:
   m_ObjectHideFlags: 0
@@ -20433,12 +20978,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: maxNumberOfFlyingObjets
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1840178425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20755,12 +21302,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: pulseOff
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!4 &1876967496 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4841809696084408, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -21273,12 +21822,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotatedz
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &1898236581
 GameObject:
   m_ObjectHideFlags: 0
@@ -22133,12 +22684,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: growth
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &1990922653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22478,12 +23031,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: rotateax
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &2009135154
 GameObject:
   m_ObjectHideFlags: 0
@@ -22495,6 +23050,7 @@ GameObject:
   - component: {fileID: 2009135158}
   - component: {fileID: 2009135157}
   - component: {fileID: 2009135156}
+  - component: {fileID: 2009135159}
   m_Layer: 0
   m_Name: WaveBDirXInputField
   m_TagString: Untagged
@@ -22575,7 +23131,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127264352}
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -22618,6 +23185,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2009135154}
+--- !u!114 &2009135159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009135154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e46395176e284aa99611e90a80693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: bxdir
+  skySlider: {fileID: 0}
+  inGameCanvas: {fileID: 0}
+  firstWindowCanvas: {fileID: 0}
+  newGameCanvas: {fileID: 0}
+  chooseModeCanvas: {fileID: 0}
+  oceanCreatorCanvas: {fileID: 0}
+  mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &2030264238
 GameObject:
   m_ObjectHideFlags: 0
@@ -23013,12 +23600,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: growth
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!1 &2109711299 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1535630546677072, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
@@ -23093,12 +23682,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: speed
+  skySlider: {fileID: 0}
   inGameCanvas: {fileID: 0}
   firstWindowCanvas: {fileID: 0}
   newGameCanvas: {fileID: 0}
   chooseModeCanvas: {fileID: 0}
   oceanCreatorCanvas: {fileID: 0}
   mountainCreatorCanvas: {fileID: 0}
+  skySpeedValue: {fileID: 0}
 --- !u!114 &2115998177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23326,12 +23917,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   param: 
+  skySlider: {fileID: 539913703}
   inGameCanvas: {fileID: 462930906}
   firstWindowCanvas: {fileID: 1158588713}
   newGameCanvas: {fileID: 264223516}
   chooseModeCanvas: {fileID: 1665098709}
   oceanCreatorCanvas: {fileID: 119782793}
   mountainCreatorCanvas: {fileID: 953467302}
+  skySpeedValue: {fileID: 3803329}
 --- !u!4 &2132810796 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4529249179773074, guid: 262a3cd2e9a432348a94ffa0ac709ecb,
