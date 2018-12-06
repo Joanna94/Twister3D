@@ -47,31 +47,60 @@ public class UIValuesGetter : MonoBehaviour {
             GameSettings.SkySpeed = ParseToFloat();
         else if(param == "axdir")
             GameSettings.WaveADirX = ParseToFloat();
-        else if(param == "aydir")
-            GameSettings.WaveADirY = ParseToFloat();
+        else if(param == "azdir")
+            GameSettings.WaveADirZ = ParseToFloat();
         else if(param == "asteepless")
             GameSettings.WaveASteepless = ParseToFloat();
         else if(param == "alength")
             GameSettings.WaveALength = ParseToFloat();
         else if(param == "bxdir")
             GameSettings.WaveBDirX = ParseToFloat();
-        else if(param == "bydir")
-            GameSettings.WaveBDirY = ParseToFloat();
+        else if(param == "bzdir")
+            GameSettings.WaveBDirZ = ParseToFloat();
         else if(param == "bsteepless")
             GameSettings.WaveBSteepless = ParseToFloat();
         else if(param =="blength")
             GameSettings.WaveBLength = ParseToFloat();
         else if(param == "cxdir")
             GameSettings.WaveCDirX = ParseToFloat();
-        else if(param == "cydir")
-            GameSettings.WaveCDirY = ParseToFloat();
+        else if(param == "czdir")
+            GameSettings.WaveCDirZ = ParseToFloat();
         else if(param == "csteepless")
             GameSettings.WaveCSteepless = ParseToFloat();
         else if(param == "clength")
             GameSettings.WaveCLength = ParseToFloat();
         else if(param == "wavesHeight")
             GameSettings.WavesHeight = ParseToFloat();
-
+        else if(param == "amplA")
+            GameSettings.WaveAAplitude = ParseToFloat();
+        else if(param == "amplB")
+            GameSettings.WaveBAplitude = ParseToFloat();
+        else if(param == "amplC")
+            GameSettings.WaveCAplitude = ParseToFloat();
+        else if(param == "amplD")
+            GameSettings.WaveDAplitude = ParseToFloat();
+        else if (param == "freqA")
+            GameSettings.WaveAFrequency = ParseToFloat();
+        else if(param == "freqB")
+            GameSettings.WaveBFrequency = ParseToFloat();
+        else if(param == "freqC")
+            GameSettings.WaveCFrequency = ParseToFloat();
+        else if(param == "freqD")
+            GameSettings.WaveDFrequency = ParseToFloat();
+        else if(param == "dsteepless")
+            GameSettings.WaveDSteepless = ParseToFloat();
+        else if(param == "aspeed")
+            GameSettings.WaveASpeed = ParseToFloat();
+        else if(param == "bspeed")
+            GameSettings.WaveBSpeed = ParseToFloat();
+        else if(param == "cspeed")
+            GameSettings.WaveCSpeed = ParseToFloat();
+        else if(param == "dspeed")
+            GameSettings.WaveDSpeed = ParseToFloat();
+        else if(param == "dxdir")
+            GameSettings.WaveDDirX = ParseToFloat();
+        else if(param == "dzdir")
+            GameSettings.WaveDDirZ = ParseToFloat();
     }
 
     private float ParseToFloat()
