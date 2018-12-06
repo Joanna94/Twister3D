@@ -74,7 +74,7 @@ public class TwisterManager : MonoBehaviour {
             temporaryFallingPreventor = (GameObject)Network.Instantiate(fallingPreventor, new Vector3(initYbotPosition.x, initYbotPosition.y - 0.3f, initYbotPosition.z), new Quaternion(), 0);
         }
 
-        //StartGame();
+        StartGame();
        // Renderer renderer = temp.GetComponent<Renderer>();
       //  Shader shader = Shader.Find("Waves");
       //  renderer.material.SetVector("_WaveA", new Vector4(-180, 6,1,50)); //-180,2,1,30

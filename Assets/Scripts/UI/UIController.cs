@@ -11,13 +11,17 @@ public class UIController : MonoBehaviour {
     public Canvas firstWindowCanvas;
     public Canvas newGameCanvas;
     public Canvas chooseModeCanvas;
+    public Canvas oceanCreatorCanvas;
+    public Canvas mountainCreatorCanvas;
 
     private void Start()
     {
         firstWindowCanvas.gameObject.SetActive(true);
         newGameCanvas.gameObject.SetActive(false); 
         inGameCanvas.gameObject.SetActive(false);
-        chooseModeCanvas.gameObject.SetActive(false);        
+        chooseModeCanvas.gameObject.SetActive(false);  
+        oceanCreatorCanvas.gameObject.SetActive(false);
+        mountainCreatorCanvas.gameObject.SetActive(false);
     }
 
     public void OnChange()
@@ -132,9 +136,18 @@ public class UIController : MonoBehaviour {
         chooseModeCanvas.gameObject.SetActive(true);
     }
 
-    public void ChooseGameMode()
+    public void ChooseOceanMode()
     {
+        chooseModeCanvas.gameObject.SetActive(false);
+        oceanCreatorCanvas.gameObject.SetActive(true);
+        TwisterManager.instance.gameMode = Mode.OCEAN;
+    }
 
+    public void ChooseMountainMode()
+    {
+        chooseModeCanvas.gameObject.SetActive(false);
+        mountainCreatorCanvas.gameObject.SetActive(true);
+        TwisterManager.instance.gameMode = Mode.MOUNTAIN;       
     }
 
     public void BackButtonClick()
@@ -143,6 +156,16 @@ public class UIController : MonoBehaviour {
         {
             chooseModeCanvas.gameObject.SetActive(false);
             firstWindowCanvas.gameObject.SetActive(true);
+        }
+        else if(oceanCreatorCanvas.gameObject.active == true)
+        {
+            oceanCreatorCanvas.gameObject.SetActive(false);
+            chooseModeCanvas.gameObject.SetActive(true);
+
+        }else if(mountainCreatorCanvas.gameObject.active == true)
+        {
+            mountainCreatorCanvas.gameObject.SetActive(false);
+            chooseModeCanvas.gameObject.SetActive(true);
         }
         
        // TwisterManager.instance.firstWindowCanvas.gameObject.SetActive(true);

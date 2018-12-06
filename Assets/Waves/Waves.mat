@@ -27,6 +27,6 @@ Material:
     - _Metallic: 0
     m_Colors:
     - _Color: {r: 0.19447447, g: 0.75708985, b: 0.839, a: 0.841}
-    - _WaveA: {r: -180, g: 2, b: 1, a: 30}
-    - _WaveB: {r: -180, g: 5, b: 0.25, a: 20}
-    - _WaveC: {r: -180, g: 5, b: 0.15, a: 10}
+    - _WaveA: {r: 1, g: 3, b: 0.25, a: 30}
+    - _WaveB: {r: 1, g: 3, b: 0.25, a: 30}
+    - _WaveC: {r: 1, g: 3, b: 0.25, a: 30}
