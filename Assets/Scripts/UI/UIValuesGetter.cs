@@ -14,7 +14,7 @@ public class UIValuesGetter : MonoBehaviour {
         else if(param == "maxNumberOfFlyingObjects")
             GameSettings.MaxNumberOfFlyingObjects = ParseToInt();
         else if(param == "speed")
-            GameSettings.Speed = ParseToFloat();
+            GameSettings.PlayerSpeed = ParseToFloat();
         else if(param == "pulseOn")
             GameSettings.Pulse = true;
         else if(param == "pulseOff")

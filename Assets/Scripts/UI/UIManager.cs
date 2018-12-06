@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour {
     {
         //przepisanie zmiennych
         var playerComponent = TwisterManager.instance.player.GetComponent<PlayerController>();
-        playerComponent.moveSpeed = GameSettings.Speed;
+        playerComponent.moveSpeed = GameSettings.PlayerSpeed;
 
         TwisterManager.instance.floorLength = GameSettings.FloorLength;
         TwisterManager.instance.maxNumberOfFlyingObjects = GameSettings.MaxNumberOfFlyingObjects;
@@ -39,18 +39,42 @@ public class UIManager : MonoBehaviour {
         foreach(GameObject c in TwisterManager.instance.cubes)
         {
             var flyingObjectComponent = c.GetComponent<FlyingObjectController>();
+
             flyingObjectComponent.pulse = GameSettings.Pulse;
-            flyingObjectComponent.pulseSpeed = GameSettings.PulseSpeed;
-            flyingObjectComponent.pulseGrowthBound = GameSettings.PulseGrowthBound;
-            flyingObjectComponent.pulseShrinkBound = GameSettings.PulseShrinkBound;
+            if(GameSettings.Pulse == false)
+            {
+                flyingObjectComponent.pulseSpeed = 0;
+                flyingObjectComponent.pulseGrowthBound = 0;
+                flyingObjectComponent.pulseShrinkBound = 0;
+            }
+            else
+            {
+                flyingObjectComponent.pulseSpeed = GameSettings.PulseSpeed;
+                flyingObjectComponent.pulseGrowthBound = GameSettings.PulseGrowthBound;
+                flyingObjectComponent.pulseShrinkBound = GameSettings.PulseShrinkBound;
+            }
+
             flyingObjectComponent.rotate = GameSettings.Rotate;
-            flyingObjectComponent.rotateSpeed = GameSettings.RotateSpeed;
-            flyingObjectComponent.rotateDirection.x = GameSettings.RotateDirectionX;
-            flyingObjectComponent.rotateDirection.y = GameSettings.RotateDirectionY;
-            flyingObjectComponent.rotateDirection.z = GameSettings.RotateDirectionZ;
-            flyingObjectComponent.rotateAmount.x = GameSettings.RotateAmountX;
-            flyingObjectComponent.rotateAmount.y = GameSettings.RotateAmountY;
-            flyingObjectComponent.rotateAmount.z = GameSettings.RotateAmountZ;
+            if(GameSettings.Rotate == false)
+            {
+                flyingObjectComponent.rotateSpeed = 0;
+                flyingObjectComponent.rotateDirection.x = 0;
+                flyingObjectComponent.rotateDirection.y = 0;
+                flyingObjectComponent.rotateDirection.z = 0;
+                flyingObjectComponent.rotateAmount.x = 0;
+                flyingObjectComponent.rotateAmount.y = 0;
+                flyingObjectComponent.rotateAmount.z = 0;
+            }
+            else
+            {
+                flyingObjectComponent.rotateSpeed = GameSettings.RotateSpeed;
+                flyingObjectComponent.rotateDirection.x = GameSettings.RotateDirectionX;
+                flyingObjectComponent.rotateDirection.y = GameSettings.RotateDirectionY;
+                flyingObjectComponent.rotateDirection.z = GameSettings.RotateDirectionZ;
+                flyingObjectComponent.rotateAmount.x = GameSettings.RotateAmountX;
+                flyingObjectComponent.rotateAmount.y = GameSettings.RotateAmountY;
+                flyingObjectComponent.rotateAmount.z = GameSettings.RotateAmountZ;
+            }
         }
 
         //niebo

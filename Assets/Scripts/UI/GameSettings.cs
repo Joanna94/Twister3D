@@ -9,7 +9,7 @@ public static class GameSettings {
     public static int MaxNumberOfFlyingObjects {get; set;}
 
     //player data
-	public static float Speed {get; set;}
+	public static float PlayerSpeed {get; set;}
 
     //flying objects data
     public static bool Pulse {get; set;}
