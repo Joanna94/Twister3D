@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Water;
 
 public class UIManager : MonoBehaviour {
 
     public Canvas inGameCanvas = null;
     public Canvas firstWindowCanvas = null;
-    public Canvas newGameCanvas = null;
     public Canvas chooseModeCanvas = null;
     public Canvas oceanCreatorCanvas = null;
     public Canvas mountainCreatorCanvas = null;
@@ -17,11 +17,11 @@ public class UIManager : MonoBehaviour {
     private void Start()
     {
         firstWindowCanvas.gameObject.SetActive(true);
-        newGameCanvas.gameObject.SetActive(false); 
         inGameCanvas.gameObject.SetActive(false);
         chooseModeCanvas.gameObject.SetActive(false);  
         oceanCreatorCanvas.gameObject.SetActive(false);
         mountainCreatorCanvas.gameObject.SetActive(false);
+
     }
 
     public void ExitButtonClick()
@@ -88,9 +88,9 @@ public class UIManager : MonoBehaviour {
         {
             Renderer oceanRenderer = TwisterManager.instance.ocean.GetComponentInChildren<Renderer>();
             Shader oceanShader = Shader.Find("Waves");
-            oceanRenderer.material.SetVector("_WaveA", new Vector4(GameSettings.WaveADirX, GameSettings.WaveADirY, GameSettings.WaveASteepless, GameSettings.WaveALength));
-            oceanRenderer.material.SetVector("_WaveB", new Vector4(GameSettings.WaveBDirX, GameSettings.WaveBDirY, GameSettings.WaveBSteepless, GameSettings.WaveBLength));
-            oceanRenderer.material.SetVector("_WaveC", new Vector4(GameSettings.WaveCDirX, GameSettings.WaveCDirY, GameSettings.WaveCSteepless, GameSettings.WaveCLength));
+            oceanRenderer.material.SetVector("_WaveA", new Vector4(GameSettings.WaveADirX, GameSettings.WaveADirZ, GameSettings.WaveASteepless, GameSettings.WaveALength));
+            oceanRenderer.material.SetVector("_WaveB", new Vector4(GameSettings.WaveBDirX, GameSettings.WaveBDirZ, GameSettings.WaveBSteepless, GameSettings.WaveBLength));
+            oceanRenderer.material.SetVector("_WaveC", new Vector4(GameSettings.WaveCDirX, GameSettings.WaveCDirZ, GameSettings.WaveCSteepless, GameSettings.WaveCLength));
             
             Vector3 oceanWaveScale = new Vector3();
             oceanWaveScale = TwisterManager.instance.ocean.transform.localScale;
@@ -100,8 +100,9 @@ public class UIManager : MonoBehaviour {
         }
         else if(TwisterManager.instance.gameMode == Mode.MOUNTAIN)
         {
-
-
+           // Transform water = TwisterManager.instance.mountain.GetComponentInChildren<Transform>().Find("Water4Advanced");
+           // GameObject waterObject = water.gameObject;
+            //var waterComponent = waterObject.GetComponent<GerstnerDisplace>();
 
         }
 
@@ -110,7 +111,6 @@ public class UIManager : MonoBehaviour {
             //ustawienie canvasow
             inGameCanvas.gameObject.SetActive(true); 
             firstWindowCanvas.gameObject.SetActive(false);
-            newGameCanvas.gameObject.SetActive(false); 
             chooseModeCanvas.gameObject.SetActive(false);
             oceanCreatorCanvas.gameObject.SetActive(false);
             mountainCreatorCanvas.gameObject.SetActive(false);
@@ -133,7 +133,6 @@ public class UIManager : MonoBehaviour {
     public void NewGameButtonClick()
     {
         firstWindowCanvas.gameObject.SetActive(false);
-        newGameCanvas.gameObject.SetActive(false); 
         inGameCanvas.gameObject.SetActive(false);  
         chooseModeCanvas.gameObject.SetActive(true);
     }

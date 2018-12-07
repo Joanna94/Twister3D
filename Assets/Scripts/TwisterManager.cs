@@ -34,6 +34,7 @@ public class TwisterManager : MonoBehaviour {
     public GameObject fallingPreventor;
     public GameObject ocean;
     public GameObject mountain;
+    public GameObject stanardWater;
     public GameObject sky;
     public GameObject[] cubes = new GameObject[5];
     public Text totalScoreText;
